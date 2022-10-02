@@ -6,7 +6,7 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import image from './src/image/onboarding.jpg';
+import image from './image/onboarding.jpg';
 
 const App = () => {
   return (
@@ -31,6 +31,9 @@ const styles = StyleSheet.create({
     maxWidth: 300,
     marginLeft: 110,
     fontWeight: 'bold',
+    textShadowColor: 'black',
+    textShadowRadius: 10,
+    textShadowOffset: {width: 5, height: 5},
   },
   imageBackground: {
     width: 638,
