@@ -1,6 +1,6 @@
 import Splash from './Splash';
 import Login from './Login';
-// import Register from './Register';
+import Home from './Home';
 import WelcomeAuth from './WelcomeAuth';
 
-export {Splash, Login, WelcomeAuth};
+export {Splash, Login, WelcomeAuth, Home};

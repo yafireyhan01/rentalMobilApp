@@ -6,14 +6,19 @@ import {
   View,
 } from 'react-native';
 import React from 'react';
-import carBackground from '../../assets/image/onboarding.jpg';
+import {CarBackground} from '../../assets';
 
 const WelcomeAuth = ({navigation}) => {
+  const handleGoTo = screen => {
+    navigation.navigate(screen);
+  };
   return (
     <View>
-      <ImageBackground source={carBackground} style={styles.imageBackground}>
+      <ImageBackground source={CarBackground} style={styles.imageBackground}>
         <Text style={styles.title}>Temukan dan sewa mobil dengan mudah</Text>
-        <TouchableOpacity style={styles.button.container}>
+        <TouchableOpacity
+          style={styles.button.container}
+          onPress={() => handleGoTo('Home')}>
           <Text style={styles.button.text}>Mulai Sekarang</Text>
         </TouchableOpacity>
       </ImageBackground>
