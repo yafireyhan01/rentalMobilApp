@@ -19,6 +19,11 @@ import {
   Xenia,
   YellowStar,
   Expander,
+  DownIcon,
+  ActivityIcon,
+  HeartIcon,
+  BellIcon,
+  PersonIcon,
 } from '../../assets';
 
 const CarLogo = props => {
@@ -43,6 +48,9 @@ const Home = ({navigation}) => {
               Bojongsari, Depok
             </Text>
           </View>
+          <TouchableOpacity style={{marginTop: 20, marginLeft: 8}}>
+            <DownIcon style={{}} />
+          </TouchableOpacity>
           <View style={styles.container.top.photo.container}>
             <View style={styles.container.top.photo.dimension} />
           </View>
@@ -220,12 +228,74 @@ const Home = ({navigation}) => {
       <View
         style={{
           backgroundColor: 'white',
-          borderColor: 'black',
-          borderWidth: 1,
+          elevation: 5,
           height: 70,
           borderRadius: 25,
           marginTop: -70,
-        }}></View>
+        }}>
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginHorizontal: 22,
+          }}>
+          <TouchableOpacity
+            style={{
+              marginTop: 10,
+              backgroundColor: 'white',
+              borderRadius: 25,
+              width: 35,
+              height: 35,
+              elevation: 3,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}>
+            <ActivityIcon style={{}} />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              marginLeft: 22,
+              marginTop: 10,
+              backgroundColor: 'white',
+              width: 35,
+              height: 35,
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: 25,
+              elevation: 3,
+            }}>
+            <HeartIcon />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              marginLeft: 22,
+              marginTop: 10,
+              backgroundColor: 'white',
+              width: 35,
+              height: 35,
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: 25,
+              elevation: 3,
+            }}>
+            <BellIcon />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              marginLeft: 22,
+              marginTop: 10,
+              backgroundColor: 'white',
+              width: 35,
+              height: 35,
+              justifyContent: 'center',
+              alignItems: 'center',
+              borderRadius: 25,
+              elevation: 3,
+            }}>
+            <PersonIcon />
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 };
@@ -240,7 +310,7 @@ const styles = StyleSheet.create({
     borderColor: 'white',
     borderWidth: 2,
     paddingLeft: 24,
-    elevation: 8,
+    elevation: 10,
     borderRadius: 25,
     color: 'black',
   },
