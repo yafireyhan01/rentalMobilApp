@@ -37,6 +37,9 @@ const CarLogo = props => {
 };
 
 const Home = ({navigation}) => {
+  const handleGoTo = screen => {
+    navigation.navigate(screen);
+  };
   return (
     <View>
       <View style={styles.container.top.container}>
@@ -148,7 +151,7 @@ const Home = ({navigation}) => {
           <View>
             <View style={{flexDirection: 'row'}}>
               <View style={{marginHorizontal: 23}}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => handleGoTo('DetailCar')}>
                   <Xenia style={{marginTop: 20}} />
                   <Text
                     style={{
