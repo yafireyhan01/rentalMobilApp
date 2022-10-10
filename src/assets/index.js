@@ -7,6 +7,11 @@ import BellIcon from './icons/Bell.svg';
 import DownIcon from './icons/downIcon.svg';
 import HeartIcon from './icons/Heart.svg';
 import PersonIcon from './icons/Person.svg';
+import BackIcon from './icons/backIcon.svg';
+import PhoneIcon from './icons/phoneIcon.svg';
+import TransmisionIcon from './icons/transmission.svg';
+import GaugeIcon from './icons/gauge.svg';
+import GasIcon from './icons/gasIcon.svg';
 //Logos
 import BmwLogo from './logos/bmw.svg';
 import DaihatsuLogo from './logos/daihatsu.svg';
@@ -16,8 +21,15 @@ import ToyotaLogo from './logos/toyota.svg';
 import CarBackground from './images/onboarding.jpg';
 import Xenia from './images/daihatsu-xenia.svg';
 import Expander from './images/mitsubishi-xpander.svg';
+import XeniaDetail from './images/xenia-detail.svg';
 
 export {
+  GasIcon,
+  GaugeIcon,
+  TransmisionIcon,
+  PhoneIcon,
+  BackIcon,
+  XeniaDetail,
   ChatIcon,
   CarBackground,
   LocationIcon,
