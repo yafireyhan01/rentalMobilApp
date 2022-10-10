@@ -228,7 +228,7 @@ const Home = ({navigation}) => {
       <View
         style={{
           backgroundColor: 'white',
-          elevation: 5,
+          elevation: 25,
           height: 70,
           borderRadius: 25,
           marginTop: -70,
