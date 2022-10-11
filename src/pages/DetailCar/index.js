@@ -21,6 +21,9 @@ import {
 } from '../../assets';
 
 const DetailCar = ({navigation}) => {
+  const handleGoTo = screen => {
+    navigation.navigate(screen);
+  };
   return (
     <View>
       <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -107,7 +110,8 @@ const DetailCar = ({navigation}) => {
               alignItems: 'center',
               padding: 14,
               borderRadius: 25,
-            }}>
+            }}
+            onPress={() => handleGoTo('Booking')}>
             <Text>Sewa Sekarang</Text>
           </TouchableOpacity>
         </View>
