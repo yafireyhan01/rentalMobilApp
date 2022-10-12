@@ -88,7 +88,8 @@ const Booking = ({navigation}) => {
           marginTop: 33,
           padding: 10,
           borderRadius: 25,
-        }}>
+        }}
+        onPress={() => handleGoTo('BookingSuccess')}>
         <Text style={{color: 'white', fontWeight: 'bold'}}>Sewa Sekarang</Text>
       </TouchableOpacity>
     </View>

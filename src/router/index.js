@@ -1,12 +1,20 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Splash, Login, Home, WelcomeAuth, DetailCar, Booking} from '../pages';
+import {
+  Splash,
+  Login,
+  Home,
+  WelcomeAuth,
+  DetailCar,
+  Booking,
+  BookingSuccess,
+} from '../pages';
 
 const Stack = createNativeStackNavigator();
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="Splash">
+    <Stack.Navigator initialRouteName="BookingSuccess">
       <Stack.Screen
         name="Splash"
         component={Splash}
@@ -35,6 +43,11 @@ const Router = () => {
       <Stack.Screen
         name="Booking"
         component={Booking}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="BookingSuccess"
+        component={BookingSuccess}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
