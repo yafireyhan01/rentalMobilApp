@@ -112,7 +112,9 @@ const DetailCar = ({navigation}) => {
               borderRadius: 25,
             }}
             onPress={() => handleGoTo('Booking')}>
-            <Text>Sewa Sekarang</Text>
+            <Text style={{fontWeight: 'bold', color: 'white'}}>
+              Sewa Sekarang
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
