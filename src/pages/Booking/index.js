@@ -1,11 +1,4 @@
-import {
-  ImageBackground,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  Modal,
-} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {BackIcon, DownIcon} from '../../assets';
 import Calendar from 'react-native-calendars/src/calendar';
