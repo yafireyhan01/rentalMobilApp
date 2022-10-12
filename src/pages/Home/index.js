@@ -1,6 +1,5 @@
 import {
   Image,
-  ImageBackground,
   ScrollView,
   StyleSheet,
   Text,
@@ -10,7 +9,6 @@ import {
 } from 'react-native';
 import React from 'react';
 import {
-  ChatIcon,
   LocationIcon,
   BmwLogo,
   DaihatsuLogo,
