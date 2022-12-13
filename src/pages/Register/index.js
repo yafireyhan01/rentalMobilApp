@@ -9,6 +9,9 @@ import {
 import React from 'react';
 
 const Register = ({navigation}) => {
+  const handleGoTo = screen => {
+    navigation.navigate(screen);
+  };
   return (
     <View style={{justifyContent: 'center', alignItems: 'center'}}>
       <Text
@@ -116,7 +119,7 @@ const Register = ({navigation}) => {
       </TouchableOpacity>
       <View style={{flexDirection: 'row'}}>
         <Text style={{color: 'black', marginTop: 20}}>Sudah punya akun?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => handleGoTo('Login')}>
           <Text
             style={{
               color: 'black',
