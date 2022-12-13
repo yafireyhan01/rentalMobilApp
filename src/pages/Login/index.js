@@ -67,8 +67,7 @@ const Login = ({navigation}) => {
           width: 174,
           alignItems: 'center',
         }}
-        // onPress={() => handleGoTo('Home')}
-      >
+        onPress={() => handleGoTo('Home')}>
         <Text
           style={{
             color: 'white',
