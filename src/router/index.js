@@ -8,13 +8,14 @@ import {
   DetailCar,
   Booking,
   BookingSuccess,
+  Register,
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="Login">
+    <Stack.Navigator initialRouteName="Register">
       <Stack.Screen
         name="Splash"
         component={Splash}
@@ -23,6 +24,11 @@ const Router = () => {
       <Stack.Screen
         name="Login"
         component={Login}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Register"
+        component={Register}
         options={{headerShown: false}}
       />
       <Stack.Screen
