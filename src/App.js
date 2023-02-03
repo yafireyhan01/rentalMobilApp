@@ -5,9 +5,11 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Router from './router';
 // import {Provider} from 'react-redux';
 // import {store} from './redux';
+import {AuthProvider} from './context/AuthContext';
 
 const App = () => {
   return (
+    // <AuthProvider>
     <NavigationContainer>
       <Router />
     </NavigationContainer>

@@ -24,15 +24,15 @@ import {
   PersonIcon,
 } from '../../assets';
 
-const CarLogo = props => {
-  return (
-    <View>
-      <TouchableOpacity>
-        <Image source={props.BmwLogo} />
-      </TouchableOpacity>
-    </View>
-  );
-};
+// const CarLogo = props => {
+//   return (
+//     <View>
+//       <TouchableOpacity>
+//         <Image source={props.BmwLogo} />
+//       </TouchableOpacity>
+//     </View>
+//   );
+// };
 
 const Home = ({navigation}) => {
   const handleGoTo = screen => {
@@ -42,16 +42,16 @@ const Home = ({navigation}) => {
     <View>
       <View style={styles.container.top.container}>
         <View style={styles.container.top.textContainer}>
-          <LocationIcon />
+          {/* <LocationIcon />
           <View style={{marginLeft: 17}}>
             <Text style={{color: '#505050'}}>Lokasi Anda</Text>
             <Text style={{color: 'black', fontWeight: 'bold'}}>
               Bojongsari, Depok
             </Text>
-          </View>
-          <TouchableOpacity style={{marginTop: 20, marginLeft: 8}}>
+          </View> */}
+          {/* <TouchableOpacity style={{marginTop: 20, marginLeft: 8}}>
             <DownIcon style={{}} />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
           <View style={styles.container.top.photo.container}>
             <View style={styles.container.top.photo.dimension} />
           </View>
@@ -73,7 +73,7 @@ const Home = ({navigation}) => {
             maxWidth: 400,
             marginTop: -10,
           }}>
-          <Text
+          {/* <Text
             style={{
               color: 'black',
               marginTop: 26,
@@ -82,8 +82,8 @@ const Home = ({navigation}) => {
               fontWeight: 'bold',
             }}>
             Paling dicari
-          </Text>
-          <TouchableOpacity>
+          </Text> */}
+          {/* <TouchableOpacity>
             <Text
               style={{
                 color: '#5a5a5a',
@@ -93,16 +93,16 @@ const Home = ({navigation}) => {
               }}>
               Lihat Semua
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         <ScrollView horizontal style={{maxHeight: 80}}>
           <View
             style={{
               flexDirection: 'row',
-              marginTop: 24,
+              // marginTop: 24,
               marginLeft: 22,
             }}>
-            <TouchableOpacity style={{marginRight: 40}}>
+            {/* <TouchableOpacity style={{marginRight: 40}}>
               <DaihatsuLogo />
             </TouchableOpacity>
             <TouchableOpacity style={{marginRight: 40}}>
@@ -113,7 +113,7 @@ const Home = ({navigation}) => {
             </TouchableOpacity>
             <TouchableOpacity style={{marginRight: 40}}>
               <BmwLogo />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             {/* <CarLogo image={BmwLogo} /> */}
           </View>
         </ScrollView>
@@ -126,14 +126,14 @@ const Home = ({navigation}) => {
           <Text
             style={{
               color: 'black',
-              marginTop: 26,
+              marginTop: -35,
               marginLeft: 22,
-              fontSize: 15,
+              fontSize: 20,
               fontWeight: 'bold',
             }}>
-            Tersedia Didekatmu
+            Tersedia Saat ini
           </Text>
-          <TouchableOpacity>
+          {/* <TouchableOpacity>
             <Text
               style={{
                 color: '#5a5a5a',
@@ -143,87 +143,169 @@ const Home = ({navigation}) => {
               }}>
               Lihat Semua
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
-        <ScrollView horizontal style={{maxHeight: 200}}>
-          <View>
-            <View style={{flexDirection: 'row'}}>
-              <View style={{marginHorizontal: 23}}>
-                <TouchableOpacity onPress={() => handleGoTo('DetailCar')}>
-                  <Xenia style={{marginTop: 20}} />
-                  <Text
-                    style={{
-                      color: 'black',
-                      marginTop: 6,
-                      fontWeight: 'bold',
-                    }}>
-                    Daihatsu Xenia 2020
-                  </Text>
-                  <View style={{flexDirection: 'row'}}>
-                    <YellowStar style={{marginTop: 11}} />
+        <ScrollView>
+          <ScrollView horizontal style={{}}>
+            <View style={{}}>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{marginHorizontal: 23}}>
+                  <TouchableOpacity onPress={() => handleGoTo('DetailCar')}>
+                    <Xenia />
                     <Text
                       style={{
-                        marginTop: 7,
-                        marginLeft: 5,
                         color: 'black',
+                        marginTop: 6,
                         fontWeight: 'bold',
                       }}>
-                      4.7
+                      Daihatsu Xenia 2020
                     </Text>
-                    <Text style={{marginTop: 7, color: '#686666'}}>
-                      (14 review)
-                    </Text>
+                    <View style={{flexDirection: 'row'}}>
+                      <YellowStar style={{marginTop: 11}} />
+                      <Text
+                        style={{
+                          marginTop: 7,
+                          marginLeft: 5,
+                          color: 'black',
+                          fontWeight: 'bold',
+                        }}>
+                        4.7
+                      </Text>
+                      <Text style={{marginTop: 7, color: '#686666'}}>
+                        (14 review)
+                      </Text>
+                      <Text
+                        style={{
+                          marginTop: 7,
+                          color: 'black',
+                          marginRight: 5,
+                          marginLeft: 20,
+                        }}>
+                        300.000/Hari
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+                <View style={{marginLeft: 28}}>
+                  <TouchableOpacity>
+                    <Expander style={{height: 45, width: 45}} />
                     <Text
                       style={{
-                        marginTop: 7,
                         color: 'black',
-                        marginRight: 5,
-                        marginLeft: 20,
-                      }}>
-                      300.000/Hari
-                    </Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-              <View style={{marginLeft: 28}}>
-                <TouchableOpacity>
-                  <Expander style={{marginTop: 20, height: 45, width: 45}} />
-                  <Text
-                    style={{
-                      color: 'black',
-                      marginTop: 6,
-                      fontWeight: 'bold',
-                    }}>
-                    Mitsubishi Expander 2022
-                  </Text>
-                  <View style={{flexDirection: 'row'}}>
-                    <YellowStar style={{marginTop: 11}} />
-                    <Text
-                      style={{
-                        marginTop: 7,
-                        marginLeft: 5,
-                        color: 'black',
+                        marginTop: 6,
                         fontWeight: 'bold',
                       }}>
-                      4.7
+                      Mitsubishi Expander 2022
                     </Text>
-                    <Text style={{marginTop: 7, color: '#686666'}}>
-                      (14 review)
-                    </Text>
-                    <Text
-                      style={{
-                        marginTop: 7,
-                        color: 'black',
-                        marginRight: 5,
-                        marginLeft: 20,
-                      }}>
-                      300.000/Hari
-                    </Text>
-                  </View>
-                </TouchableOpacity>
+                    <View style={{flexDirection: 'row'}}>
+                      <YellowStar style={{marginTop: 11}} />
+                      <Text
+                        style={{
+                          marginTop: 7,
+                          marginLeft: 5,
+                          color: 'black',
+                          fontWeight: 'bold',
+                        }}>
+                        4.7
+                      </Text>
+                      <Text style={{marginTop: 7, color: '#686666'}}>
+                        (14 review)
+                      </Text>
+                      <Text
+                        style={{
+                          marginTop: 7,
+                          color: 'black',
+                          marginRight: 5,
+                          marginLeft: 20,
+                        }}>
+                        300.000/Hari
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
-          </View>
+          </ScrollView>
+          <ScrollView horizontal style={{maxHeight: 200}}>
+            <View style={{}}>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{marginHorizontal: 23}}>
+                  <TouchableOpacity onPress={() => handleGoTo('DetailCar')}>
+                    <Xenia />
+                    <Text
+                      style={{
+                        color: 'black',
+                        marginTop: 6,
+                        fontWeight: 'bold',
+                      }}>
+                      Daihatsu Xenia 2020
+                    </Text>
+                    <View style={{flexDirection: 'row'}}>
+                      <YellowStar style={{marginTop: 11}} />
+                      <Text
+                        style={{
+                          marginTop: 7,
+                          marginLeft: 5,
+                          color: 'black',
+                          fontWeight: 'bold',
+                        }}>
+                        4.7
+                      </Text>
+                      <Text style={{marginTop: 7, color: '#686666'}}>
+                        (14 review)
+                      </Text>
+                      <Text
+                        style={{
+                          marginTop: 7,
+                          color: 'black',
+                          marginRight: 5,
+                          marginLeft: 20,
+                        }}>
+                        300.000/Hari
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+                <View style={{marginLeft: 28}}>
+                  <TouchableOpacity>
+                    <Expander style={{height: 45, width: 45}} />
+                    <Text
+                      style={{
+                        color: 'black',
+                        marginTop: 6,
+                        fontWeight: 'bold',
+                      }}>
+                      Mitsubishi Expander 2022
+                    </Text>
+                    <View style={{flexDirection: 'row'}}>
+                      <YellowStar style={{marginTop: 11}} />
+                      <Text
+                        style={{
+                          marginTop: 7,
+                          marginLeft: 5,
+                          color: 'black',
+                          fontWeight: 'bold',
+                        }}>
+                        4.7
+                      </Text>
+                      <Text style={{marginTop: 7, color: '#686666'}}>
+                        (14 review)
+                      </Text>
+                      <Text
+                        style={{
+                          marginTop: 7,
+                          color: 'black',
+                          marginRight: 5,
+                          marginLeft: 20,
+                        }}>
+                        300.000/Hari
+                      </Text>
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+          </ScrollView>
         </ScrollView>
       </View>
       <View
@@ -344,7 +426,7 @@ const styles = StyleSheet.create({
       title: {
         color: 'black',
         marginLeft: 22,
-        marginTop: 50,
+        // marginTop: 50,
         fontSize: 20,
         maxWidth: 202,
         fontWeight: 'bold',

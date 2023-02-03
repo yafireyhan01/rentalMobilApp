@@ -13,7 +13,13 @@ const Booking = ({navigation}) => {
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <BackIcon style={{marginLeft: 10}} />
         </TouchableOpacity>
-        <Text style={{color: 'black', marginLeft: 40, fontWeight: 'bold'}}>
+        <Text
+          style={{
+            color: 'black',
+            marginLeft: 20,
+            fontWeight: 'bold',
+            fontSize: 18,
+          }}>
           Tentukan Tanggal & Waktu
         </Text>
       </View>
@@ -24,7 +30,7 @@ const Booking = ({navigation}) => {
           marginHorizontal: 40,
           justifyContent: 'space-between',
         }}>
-        <Text
+        {/* <Text
           style={{
             color: 'black',
             maxWidth: 100,
@@ -41,9 +47,9 @@ const Booking = ({navigation}) => {
             fontSize: 15,
           }}>
           Waktu Pengembalian
-        </Text>
+        </Text> */}
       </View>
-      <View
+      {/* <View
         style={{
           flexDirection: 'row',
           marginHorizontal: 40,
@@ -78,7 +84,7 @@ const Booking = ({navigation}) => {
             <DownIcon style={{marginLeft: 15}} />
           </TouchableOpacity>
         </View>
-      </View>
+      </View> */}
       <TouchableOpacity
         style={{
           backgroundColor: 'black',
@@ -89,7 +95,7 @@ const Booking = ({navigation}) => {
           padding: 10,
           borderRadius: 25,
         }}
-        onPress={() => handleGoTo('BookingSuccess')}>
+        onPress={() => handleGoTo('Payment')}>
         <Text style={{color: 'white', fontWeight: 'bold'}}>Sewa Sekarang</Text>
       </TouchableOpacity>
     </View>

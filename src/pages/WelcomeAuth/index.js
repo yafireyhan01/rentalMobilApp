@@ -18,7 +18,7 @@ const WelcomeAuth = ({navigation}) => {
         <Text style={styles.title}>Temukan dan sewa mobil dengan mudah</Text>
         <TouchableOpacity
           style={styles.button.container}
-          onPress={() => handleGoTo('Home')}>
+          onPress={() => handleGoTo('Login')}>
           <Text style={styles.button.text}>Mulai Sekarang</Text>
         </TouchableOpacity>
       </ImageBackground>

@@ -6,6 +6,7 @@ import WelcomeAuth from './WelcomeAuth';
 import DetailCar from './DetailCar';
 import Booking from './Booking';
 import BookingSuccess from './BookingSuccess';
+import Payment from './Payment';
 
 export {
   Splash,
@@ -16,4 +17,5 @@ export {
   Booking,
   BookingSuccess,
   Register,
+  Payment,
 };

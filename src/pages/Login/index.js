@@ -6,9 +6,16 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
 const Login = ({navigation}) => {
+  // const [email, setEmail] = useState('');
+  // const [password, setPassword] = useState('');
+
+  // const onSignInPressed = () => {
+  //   console.warn('Login');
+  // };
+
   const handleGoTo = screen => {
     navigation.navigate(screen);
   };
@@ -37,6 +44,8 @@ const Login = ({navigation}) => {
         }}
         placeholder="No. HP / Email"
         placeholderTextColor="black"
+        // value={email}
+        // setValue={setEmail}
       />
       <TextInput
         style={{
@@ -52,6 +61,10 @@ const Login = ({navigation}) => {
         }}
         placeholder="Password"
         placeholderTextColor="black"
+        // // onChangeText={setValue}
+        // value={password}
+        // setValue={setPassword}
+        // secureTextEntry={true}
       />
       <TouchableOpacity>
         <Text style={{color: 'black', marginTop: 20, marginLeft: -115}}>
@@ -67,7 +80,9 @@ const Login = ({navigation}) => {
           width: 174,
           alignItems: 'center',
         }}
-        onPress={() => handleGoTo('Home')}>
+        onPress={() => handleGoTo('Home')}
+        // onPress={onSignInPressed}
+      >
         <Text
           style={{
             color: 'white',

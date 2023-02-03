@@ -9,13 +9,14 @@ import {
   Booking,
   BookingSuccess,
   Register,
+  Payment,
 } from '../pages';
 
 const Stack = createNativeStackNavigator();
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="Register">
+    <Stack.Navigator initialRouteName="Splash">
       <Stack.Screen
         name="Splash"
         component={Splash}
@@ -54,6 +55,11 @@ const Router = () => {
       <Stack.Screen
         name="BookingSuccess"
         component={BookingSuccess}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Payment"
+        component={Payment}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

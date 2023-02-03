@@ -1,4 +1,5 @@
 import {
+  Button,
   ImageBackground,
   StyleSheet,
   Text,
@@ -6,9 +7,18 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useContext, useState} from 'react';
+import {AuthContext} from '../../context/AuthContext';
 
 const Register = ({navigation}) => {
+  // const [name, setName] = useState(null);
+  // const [phone, setPhone] = useState(null);
+  // const [email, setEmail] = useState(null);
+  // const [password, setPassword] = useState(null);
+  // // const val = useContext(AuthContext);
+
+  // const {register} = useContext(AuthContext);
+
   const handleGoTo = screen => {
     navigation.navigate(screen);
   };
@@ -37,6 +47,7 @@ const Register = ({navigation}) => {
         }}
         placeholder="Nama"
         placeholderTextColor="black"
+        // onChangeText={text => setName(text)}
       />
       <TextInput
         style={{
@@ -52,6 +63,7 @@ const Register = ({navigation}) => {
         }}
         placeholder="No. HP"
         placeholderTextColor="black"
+        // onChangeText={text => setPhone(text)}
       />
       <TextInput
         style={{
@@ -67,6 +79,7 @@ const Register = ({navigation}) => {
         }}
         placeholder="Email"
         placeholderTextColor="black"
+        // onChangeText={text => setEmail(text)}
       />
       <TextInput
         style={{
@@ -82,6 +95,8 @@ const Register = ({navigation}) => {
         }}
         placeholder="Password"
         placeholderTextColor="black"
+        // onChangeText={text => setPassword(text)}
+        // secureTextEntry
       />
       <TextInput
         style={{
@@ -98,6 +113,12 @@ const Register = ({navigation}) => {
         placeholder="Ketik ulang password"
         placeholderTextColor="black"
       />
+      {/* <Button
+        title="Register"
+        onPress={() => {
+          register(name, phone, email, password);
+        }}
+      /> */}
       <TouchableOpacity
         style={{
           backgroundColor: 'black',
@@ -107,7 +128,10 @@ const Register = ({navigation}) => {
           width: 174,
           alignItems: 'center',
         }}
-        // onPress={() => handleGoTo('Home')}
+        onPress={() => handleGoTo('Home')}
+        // onPress={() => {
+        //   register(name, phone, email, password);
+        // }}
       >
         <Text
           style={{
