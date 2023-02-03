@@ -9,10 +9,11 @@ import {AuthProvider} from './context/AuthContext';
 
 const App = () => {
   return (
-    // <AuthProvider>
-    <NavigationContainer>
-      <Router />
-    </NavigationContainer>
+    <AuthProvider>
+      <NavigationContainer>
+        <Router />
+      </NavigationContainer>
+    </AuthProvider>
   );
 };
 
