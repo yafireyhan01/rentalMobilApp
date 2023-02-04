@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:3000/api/user';
+export const BASE_URL = 'http://192.168.1.11:3000/api/user';
 
 // import firebase from 'firebase/compat/app';
 // import 'firebase/compat/auth';

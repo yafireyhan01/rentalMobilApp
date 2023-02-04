@@ -12,8 +12,9 @@ import {AuthContext} from '../../context/AuthContext';
 
 const Register = ({navigation}) => {
   const [name, setName] = useState(null);
-  const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState(null);
+  const [phone, setPhone] = useState(null);
+  const [address, setAddress] = useState(null);
   const [password, setPassword] = useState(null);
   // const val = useContext(AuthContext);
 
@@ -61,6 +62,22 @@ const Register = ({navigation}) => {
           height: 40,
           color: 'black',
         }}
+        placeholder="Email"
+        placeholderTextColor="black"
+        onChangeText={text => setEmail(text)}
+      />
+      <TextInput
+        style={{
+          backgroundColor: '#D9D9D9',
+          marginTop: 25,
+          borderColor: '#D9D9D9',
+          borderWidth: 2,
+          paddingLeft: 15,
+          borderRadius: 10,
+          width: 250,
+          height: 40,
+          color: 'black',
+        }}
         placeholder="No. HP"
         placeholderTextColor="black"
         onChangeText={text => setPhone(text)}
@@ -77,9 +94,9 @@ const Register = ({navigation}) => {
           height: 40,
           color: 'black',
         }}
-        placeholder="Email"
+        placeholder="Alamat"
         placeholderTextColor="black"
-        onChangeText={text => setEmail(text)}
+        onChangeText={text => setAddress(text)}
       />
       <TextInput
         style={{
@@ -116,7 +133,7 @@ const Register = ({navigation}) => {
       <Button
         title="Register"
         onPress={() => {
-          register(name, phone, email, password);
+          register(name, email, phone, address, password);
         }}
       />
       <TouchableOpacity
@@ -130,7 +147,7 @@ const Register = ({navigation}) => {
         }}
         // onPress={() => handleGoTo('Home')}
         onPress={() => {
-          register(name, phone, email, password);
+          register(name, email, phone, address, password);
         }}>
         <Text
           style={{
