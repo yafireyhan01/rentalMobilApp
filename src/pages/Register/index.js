@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import React, {useContext, useState} from 'react';
 import {AuthContext} from '../../context/AuthContext';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 const Register = ({navigation}) => {
   const [name, setName] = useState(null);
@@ -18,13 +19,14 @@ const Register = ({navigation}) => {
   const [password, setPassword] = useState(null);
   // const val = useContext(AuthContext);
 
-  const {register} = useContext(AuthContext);
+  const {isLoading, register} = useContext(AuthContext);
 
   const handleGoTo = screen => {
     navigation.navigate(screen);
   };
   return (
     <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <Spinner visible={isLoading} />
       <Text
         style={{
           color: 'black',

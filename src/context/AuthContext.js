@@ -1,26 +1,21 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
-import React, {Component, createContext} from 'react';
+import React, {Component, createContext, useState} from 'react';
 import {Alert} from 'react-native';
 import {BASE_URL} from '../config';
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
+  const [userInfo, setUserInfo] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+
   const register = (name, email, phone, address, password) => {
+    setIsLoading(true);
+
     console.log(`${BASE_URL}/register`);
     console.log('masuk');
     let data = axios;
-    // //   .get(`http://127.0.0.1:3000/api/user/testing`)
-    // .get(`https//192.168.1.11:3000/fact`)
-    // .then(res => {
-    //   console.log(res.data);
-    //   Alert.alert('Login Berhasil');
-    // })
-    // .catch(e => {
-    //   console.log(e.message);
-    //   Alert.alert('Login gagal');
-    // });
-    // console.log(data);
     console.log('=========');
     axios
       .post(`${BASE_URL}/register`, {
@@ -32,14 +27,40 @@ export const AuthProvider = ({children}) => {
       })
       .then(res => {
         let userInfo = res.data;
+        setUserInfo(userInfo);
+        AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
+        setIsLoading(false);
         console.log(userInfo);
       })
       .catch(e => {
         console.log(`belum bisa nih ${e}`);
+        setIsLoading(false);
+      });
+  };
+
+  const login = (email, password) => {
+    setIsLoading(true);
+    axios
+      .post(`${BASE_URL}/login`, {
+        email,
+        password,
+      })
+      .then(res => {
+        let userInfo = res.data;
+        console.log(userInfo);
+        setUserInfo(userInfo);
+        AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
+        setIsLoading(false);
+      })
+      .catch(e => {
+        console.log(`belum bisa ${e}`);
+        setIsLoading(false);
       });
   };
 
   return (
-    <AuthContext.Provider value={{register}}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{isLoading, userInfo, register, login}}>
+      {children}
+    </AuthContext.Provider>
   );
 };

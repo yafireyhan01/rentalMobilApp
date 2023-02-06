@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
+// import {NavigationContainer} from '@react-navigation/native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import Router from './router';
 // import {Provider} from 'react-redux';
@@ -10,9 +10,9 @@ import {AuthProvider} from './context/AuthContext';
 const App = () => {
   return (
     <AuthProvider>
-      <NavigationContainer>
-        <Router />
-      </NavigationContainer>
+      {/* <NavigationContainer> */}
+      <Router />
+      {/* </NavigationContainer> */}
     </AuthProvider>
   );
 };

@@ -6,21 +6,22 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
+import {AuthContext} from '../../context/AuthContext';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 const Login = ({navigation}) => {
-  // const [email, setEmail] = useState('');
-  // const [password, setPassword] = useState('');
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
 
-  // const onSignInPressed = () => {
-  //   console.warn('Login');
-  // };
+  const {isLoading, login} = useContext(AuthContext);
 
   const handleGoTo = screen => {
     navigation.navigate(screen);
   };
   return (
     <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <Spinner visible={isLoading} />
       <Text
         style={{
           color: 'black',
@@ -44,8 +45,8 @@ const Login = ({navigation}) => {
         }}
         placeholder="No. HP / Email"
         placeholderTextColor="black"
-        // value={email}
-        // setValue={setEmail}
+        value={email}
+        onChangeText={text => setEmail(text)}
       />
       <TextInput
         style={{
@@ -61,10 +62,9 @@ const Login = ({navigation}) => {
         }}
         placeholder="Password"
         placeholderTextColor="black"
-        // // onChangeText={setValue}
-        // value={password}
-        // setValue={setPassword}
-        // secureTextEntry={true}
+        value={password}
+        onChangeText={text => setPassword(text)}
+        secureTextEntry={true}
       />
       <TouchableOpacity>
         <Text style={{color: 'black', marginTop: 20, marginLeft: -115}}>
@@ -80,7 +80,10 @@ const Login = ({navigation}) => {
           width: 174,
           alignItems: 'center',
         }}
-        onPress={() => handleGoTo('Home')}
+        // onPress={() => handleGoTo('Home')}
+        onPress={() => {
+          login(email, password);
+        }}
         // onPress={onSignInPressed}
       >
         <Text
