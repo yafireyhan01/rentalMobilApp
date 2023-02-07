@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {Text, View} from 'react-native';
+import {SplashCar} from '../../assets';
 
 const Splash = ({navigation}) => {
   useEffect(() => {
@@ -9,7 +10,7 @@ const Splash = ({navigation}) => {
   });
   return (
     <View>
-      <Text style={{color: 'black'}}>Splash Screen</Text>
+      <SplashCar />
     </View>
   );
 };

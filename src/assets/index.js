@@ -13,6 +13,7 @@ import TransmisionIcon from './icons/transmission.svg';
 import GaugeIcon from './icons/gauge.svg';
 import GasIcon from './icons/gasIcon.svg';
 import CheckIcon from './icons/checkIcon.svg';
+import SplashCar from './icons/car.svg';
 //Logos
 import BmwLogo from './logos/bmw.svg';
 import DaihatsuLogo from './logos/daihatsu.svg';
@@ -25,6 +26,7 @@ import Expander from './images/mitsubishi-xpander.svg';
 import XeniaDetail from './images/xenia-detail.svg';
 
 export {
+  SplashCar,
   CheckIcon,
   GasIcon,
   GaugeIcon,
