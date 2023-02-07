@@ -1,4 +1,5 @@
 import {
+  Button,
   ImageBackground,
   StyleSheet,
   Text,
@@ -94,6 +95,12 @@ const Login = ({navigation}) => {
           Login
         </Text>
       </TouchableOpacity>
+      <Button
+        title="Login"
+        onPress={() => {
+          login(email, password);
+        }}
+      />
       <View style={{flexDirection: 'row'}}>
         <Text style={{color: 'black', marginTop: 20}}>Belum punya akun?</Text>
         <TouchableOpacity onPress={() => handleGoTo('Register')}>

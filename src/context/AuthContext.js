@@ -12,11 +12,6 @@ export const AuthProvider = ({children}) => {
 
   const register = (name, email, phone, address, password) => {
     setIsLoading(true);
-
-    console.log(`${BASE_URL}/register`);
-    console.log('masuk');
-    let data = axios;
-    console.log('=========');
     axios
       .post(`${BASE_URL}/register`, {
         name,
@@ -31,6 +26,7 @@ export const AuthProvider = ({children}) => {
         AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
         setIsLoading(false);
         console.log(userInfo);
+        Alert.alert('Register success');
       })
       .catch(e => {
         console.log(`belum bisa nih ${e}`);
@@ -47,10 +43,10 @@ export const AuthProvider = ({children}) => {
       })
       .then(res => {
         let userInfo = res.data;
-        console.log(userInfo);
         setUserInfo(userInfo);
         AsyncStorage.setItem('userInfo', JSON.stringify(userInfo));
         setIsLoading(false);
+        console.log(userInfo);
       })
       .catch(e => {
         console.log(`belum bisa ${e}`);

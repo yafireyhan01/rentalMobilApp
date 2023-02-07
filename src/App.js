@@ -6,13 +6,14 @@ import Router from './router';
 // import {Provider} from 'react-redux';
 // import {store} from './redux';
 import {AuthProvider} from './context/AuthContext';
+import {NavigationContainer} from '@react-navigation/native';
 
 const App = () => {
   return (
     <AuthProvider>
-      {/* <NavigationContainer> */}
-      <Router />
-      {/* </NavigationContainer> */}
+      <NavigationContainer>
+        <Router />
+      </NavigationContainer>
     </AuthProvider>
   );
 };
