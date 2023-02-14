@@ -10,6 +10,10 @@ import {
   BookingSuccess,
   Register,
   Payment,
+  Transaction,
+  Favorite,
+  Profile,
+  Notif,
 } from '../pages';
 import {AuthContext} from '../context/AuthContext';
 
@@ -42,13 +46,23 @@ const Router = () => {
         </>
       )}
       <Stack.Screen
-        name="Splash"
-        component={Splash}
+        name="Transaction"
+        component={Transaction}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="WelcomeAuth"
-        component={WelcomeAuth}
+        name="Favorite"
+        component={Favorite}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Notif"
+        component={Notif}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={Profile}
         options={{headerShown: false}}
       />
       <Stack.Screen

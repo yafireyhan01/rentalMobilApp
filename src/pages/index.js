@@ -7,8 +7,16 @@ import DetailCar from './DetailCar';
 import Booking from './Booking';
 import BookingSuccess from './BookingSuccess';
 import Payment from './Payment';
+import Transaction from './Transaction';
+import Favorite from './Favorite';
+import Notif from './Notif';
+import Profile from './Profile';
 
 export {
+  Profile,
+  Notif,
+  Favorite,
+  Transaction,
   Splash,
   Login,
   WelcomeAuth,

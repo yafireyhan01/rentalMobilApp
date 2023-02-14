@@ -36,10 +36,14 @@ const Register = ({navigation}) => {
         }}>
         Register
       </Text>
+      <Text style={{color: 'black', marginTop: 20, marginLeft: -150}}>
+        Nama Lengkap
+      </Text>
+      {/* <Text style={{color: 'black'}}>Masukkan Nama Anda</Text> */}
       <TextInput
         style={{
           backgroundColor: '#D9D9D9',
-          marginTop: 35,
+          marginTop: 5,
           borderColor: '#D9D9D9',
           borderWidth: 2,
           paddingLeft: 15,
@@ -48,14 +52,17 @@ const Register = ({navigation}) => {
           height: 40,
           color: 'black',
         }}
-        placeholder="Nama"
+        placeholder="Masukkan nama anda"
         placeholderTextColor="black"
         onChangeText={text => setName(text)}
       />
+      <Text style={{color: 'black', marginTop: 20, marginLeft: -210}}>
+        Email:
+      </Text>
       <TextInput
         style={{
           backgroundColor: '#D9D9D9',
-          marginTop: 25,
+          marginTop: 5,
           borderColor: '#D9D9D9',
           borderWidth: 2,
           paddingLeft: 15,
@@ -64,14 +71,17 @@ const Register = ({navigation}) => {
           height: 40,
           color: 'black',
         }}
-        placeholder="Email"
+        placeholder="Masukkan email anda"
         placeholderTextColor="black"
         onChangeText={text => setEmail(text)}
       />
+      <Text style={{color: 'black', marginTop: 20, marginLeft: -130}}>
+        Nomor Handphone
+      </Text>
       <TextInput
         style={{
           backgroundColor: '#D9D9D9',
-          marginTop: 25,
+          marginTop: 5,
           borderColor: '#D9D9D9',
           borderWidth: 2,
           paddingLeft: 15,
@@ -80,14 +90,17 @@ const Register = ({navigation}) => {
           height: 40,
           color: 'black',
         }}
-        placeholder="No. HP"
+        placeholder="Masukkan nomor handphone anda"
         placeholderTextColor="black"
         onChangeText={text => setPhone(text)}
       />
+      <Text style={{color: 'black', marginTop: 20, marginLeft: -200}}>
+        Alamat
+      </Text>
       <TextInput
         style={{
           backgroundColor: '#D9D9D9',
-          marginTop: 25,
+          marginTop: 5,
           borderColor: '#D9D9D9',
           borderWidth: 2,
           paddingLeft: 15,
@@ -96,14 +109,17 @@ const Register = ({navigation}) => {
           height: 40,
           color: 'black',
         }}
-        placeholder="Alamat"
+        placeholder="Masukkan alamat anda"
         placeholderTextColor="black"
         onChangeText={text => setAddress(text)}
       />
+      <Text style={{color: 'black', marginTop: 20, marginLeft: -180}}>
+        Password
+      </Text>
       <TextInput
         style={{
           backgroundColor: '#D9D9D9',
-          marginTop: 25,
+          marginTop: 5,
           borderColor: '#D9D9D9',
           borderWidth: 2,
           paddingLeft: 15,
@@ -112,12 +128,12 @@ const Register = ({navigation}) => {
           height: 40,
           color: 'black',
         }}
-        placeholder="Password"
+        placeholder="Masukkan password anda"
         placeholderTextColor="black"
         onChangeText={text => setPassword(text)}
         secureTextEntry
       />
-      <TextInput
+      {/* <TextInput
         style={{
           backgroundColor: '#D9D9D9',
           marginTop: 25,
@@ -131,13 +147,14 @@ const Register = ({navigation}) => {
         }}
         placeholder="Ketik ulang password"
         placeholderTextColor="black"
-      />
-      <Button
+        secureTextEntry
+      /> */}
+      {/* <Button
         title="Register"
         onPress={() => {
           register(name, email, phone, address, password);
         }}
-      />
+      /> */}
       <TouchableOpacity
         style={{
           backgroundColor: 'black',

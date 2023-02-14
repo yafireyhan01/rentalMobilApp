@@ -13,7 +13,7 @@ export const AuthProvider = ({children}) => {
   const register = (name, email, phone, address, password) => {
     setIsLoading(true);
     axios
-      .post(`${BASE_URL}/register`, {
+      .post(`${BASE_URL}/user/register`, {
         name,
         email,
         phone,
@@ -37,7 +37,7 @@ export const AuthProvider = ({children}) => {
   const login = (email, password) => {
     setIsLoading(true);
     axios
-      .post(`${BASE_URL}/login`, {
+      .post(`${BASE_URL}/user/login`, {
         email,
         password,
       })

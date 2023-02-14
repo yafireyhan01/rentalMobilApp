@@ -32,10 +32,13 @@ const Login = ({navigation}) => {
         }}>
         Login
       </Text>
+      <Text style={{color: 'black', marginTop: 30, marginLeft: -210}}>
+        Email
+      </Text>
       <TextInput
         style={{
           backgroundColor: '#D9D9D9',
-          marginTop: 35,
+          marginTop: 5,
           borderColor: '#D9D9D9',
           borderWidth: 2,
           paddingLeft: 15,
@@ -44,15 +47,18 @@ const Login = ({navigation}) => {
           height: 40,
           color: 'black',
         }}
-        placeholder="No. HP / Email"
+        placeholder="Masukkan Email Anda"
         placeholderTextColor="black"
         value={email}
         onChangeText={text => setEmail(text)}
       />
+      <Text style={{color: 'black', marginTop: 30, marginLeft: -180}}>
+        Password
+      </Text>
       <TextInput
         style={{
           backgroundColor: '#D9D9D9',
-          marginTop: 25,
+          marginTop: 5,
           borderColor: '#D9D9D9',
           borderWidth: 2,
           paddingLeft: 15,
@@ -61,7 +67,7 @@ const Login = ({navigation}) => {
           height: 40,
           color: 'black',
         }}
-        placeholder="Password"
+        placeholder="Masukkan Password Anda"
         placeholderTextColor="black"
         value={password}
         onChangeText={text => setPassword(text)}
@@ -95,12 +101,12 @@ const Login = ({navigation}) => {
           Login
         </Text>
       </TouchableOpacity>
-      <Button
+      {/* <Button
         title="Login"
         onPress={() => {
           login(email, password);
         }}
-      />
+      /> */}
       <View style={{flexDirection: 'row'}}>
         <Text style={{color: 'black', marginTop: 20}}>Belum punya akun?</Text>
         <TouchableOpacity onPress={() => handleGoTo('Register')}>

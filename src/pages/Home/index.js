@@ -332,7 +332,8 @@ const Home = ({navigation}) => {
               elevation: 3,
               justifyContent: 'center',
               alignItems: 'center',
-            }}>
+            }}
+            onPress={() => handleGoTo('Transaction')}>
             <ActivityIcon style={{}} />
           </TouchableOpacity>
           <TouchableOpacity
@@ -346,7 +347,8 @@ const Home = ({navigation}) => {
               alignItems: 'center',
               borderRadius: 25,
               elevation: 3,
-            }}>
+            }}
+            onPress={() => handleGoTo('Favorite')}>
             <HeartIcon />
           </TouchableOpacity>
           <TouchableOpacity
@@ -360,7 +362,8 @@ const Home = ({navigation}) => {
               alignItems: 'center',
               borderRadius: 25,
               elevation: 3,
-            }}>
+            }}
+            onPress={() => handleGoTo('Notif')}>
             <BellIcon />
           </TouchableOpacity>
           <TouchableOpacity
@@ -374,7 +377,8 @@ const Home = ({navigation}) => {
               alignItems: 'center',
               borderRadius: 25,
               elevation: 3,
-            }}>
+            }}
+            onPress={() => handleGoTo('Profile')}>
             <PersonIcon />
           </TouchableOpacity>
         </View>
