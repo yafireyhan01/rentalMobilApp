@@ -90,9 +90,7 @@ const Login = ({navigation}) => {
         // onPress={() => handleGoTo('Home')}
         onPress={() => {
           login(email, password);
-        }}
-        // onPress={onSignInPressed}
-      >
+        }}>
         <Text
           style={{
             color: 'white',
@@ -101,12 +99,6 @@ const Login = ({navigation}) => {
           Login
         </Text>
       </TouchableOpacity>
-      {/* <Button
-        title="Login"
-        onPress={() => {
-          login(email, password);
-        }}
-      /> */}
       <View style={{flexDirection: 'row'}}>
         <Text style={{color: 'black', marginTop: 20}}>Belum punya akun?</Text>
         <TouchableOpacity onPress={() => handleGoTo('Register')}>

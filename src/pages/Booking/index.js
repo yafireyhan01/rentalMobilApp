@@ -29,62 +29,7 @@ const Booking = ({navigation}) => {
           flexDirection: 'row',
           marginHorizontal: 40,
           justifyContent: 'space-between',
-        }}>
-        {/* <Text
-          style={{
-            color: 'black',
-            maxWidth: 100,
-            fontWeight: 'bold',
-            fontSize: 15,
-          }}>
-          Waktu Pengambilan
-        </Text>
-        <Text
-          style={{
-            color: 'black',
-            maxWidth: 100,
-            fontWeight: 'bold',
-            fontSize: 15,
-          }}>
-          Waktu Pengembalian
-        </Text> */}
-      </View>
-      {/* <View
-        style={{
-          flexDirection: 'row',
-          marginHorizontal: 40,
-          justifyContent: 'space-between',
-          marginTop: 15,
-        }}>
-        <View
-          style={{
-            backgroundColor: '#c1bebe',
-            borderRadius: 25,
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: 10,
-            flexDirection: 'row',
-          }}>
-          <Text style={{color: 'black'}}>10:00</Text>
-          <TouchableOpacity>
-            <DownIcon style={{marginLeft: 15}} />
-          </TouchableOpacity>
-        </View>
-        <View
-          style={{
-            backgroundColor: '#c1bebe',
-            justifyContent: 'center',
-            alignItems: 'center',
-            borderRadius: 25,
-            padding: 10,
-            flexDirection: 'row',
-          }}>
-          <Text style={{color: 'black'}}>10:00</Text>
-          <TouchableOpacity>
-            <DownIcon style={{marginLeft: 15}} />
-          </TouchableOpacity>
-        </View>
-      </View> */}
+        }}></View>
       <TouchableOpacity
         style={{
           backgroundColor: 'black',
