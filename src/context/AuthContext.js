@@ -54,6 +54,10 @@ export const AuthProvider = ({children}) => {
       });
   };
 
+  const logout = () => {
+    setIsLoading(true);
+  };
+
   return (
     <AuthContext.Provider value={{isLoading, userInfo, register, login}}>
       {children}

@@ -42,16 +42,6 @@ const Home = ({navigation}) => {
     <View>
       <View style={styles.container.top.container}>
         <View style={styles.container.top.textContainer}>
-          {/* <LocationIcon />
-          <View style={{marginLeft: 17}}>
-            <Text style={{color: '#505050'}}>Lokasi Anda</Text>
-            <Text style={{color: 'black', fontWeight: 'bold'}}>
-              Bojongsari, Depok
-            </Text>
-          </View> */}
-          {/* <TouchableOpacity style={{marginTop: 20, marginLeft: 8}}>
-            <DownIcon style={{}} />
-          </TouchableOpacity> */}
           <View style={styles.container.top.photo.container}>
             <View style={styles.container.top.photo.dimension} />
           </View>
@@ -72,50 +62,14 @@ const Home = ({navigation}) => {
             justifyContent: 'space-between',
             maxWidth: 400,
             marginTop: -10,
-          }}>
-          {/* <Text
-            style={{
-              color: 'black',
-              marginTop: 26,
-              marginLeft: 22,
-              fontSize: 15,
-              fontWeight: 'bold',
-            }}>
-            Paling dicari
-          </Text> */}
-          {/* <TouchableOpacity>
-            <Text
-              style={{
-                color: '#5a5a5a',
-                marginTop: 26,
-                marginRight: 22,
-                fontSize: 12,
-              }}>
-              Lihat Semua
-            </Text>
-          </TouchableOpacity> */}
-        </View>
+          }}></View>
         <ScrollView horizontal style={{maxHeight: 80}}>
           <View
             style={{
               flexDirection: 'row',
               // marginTop: 24,
               marginLeft: 22,
-            }}>
-            {/* <TouchableOpacity style={{marginRight: 40}}>
-              <DaihatsuLogo />
-            </TouchableOpacity>
-            <TouchableOpacity style={{marginRight: 40}}>
-              <ToyotaLogo />
-            </TouchableOpacity>
-            <TouchableOpacity style={{marginRight: 40}}>
-              <MitsubishiLogo />
-            </TouchableOpacity>
-            <TouchableOpacity style={{marginRight: 40}}>
-              <BmwLogo />
-            </TouchableOpacity> */}
-            {/* <CarLogo image={BmwLogo} /> */}
-          </View>
+            }}></View>
         </ScrollView>
         <View
           style={{
@@ -133,17 +87,6 @@ const Home = ({navigation}) => {
             }}>
             Tersedia Saat ini
           </Text>
-          {/* <TouchableOpacity>
-            <Text
-              style={{
-                color: '#5a5a5a',
-                marginTop: 26,
-                marginRight: 22,
-                fontSize: 12,
-              }}>
-              Lihat Semua
-            </Text>
-          </TouchableOpacity> */}
         </View>
         <ScrollView>
           <ScrollView horizontal style={{}}>

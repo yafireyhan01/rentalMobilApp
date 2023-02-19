@@ -24,8 +24,10 @@ import CarBackground from './images/onboarding.jpg';
 import Xenia from './images/daihatsu-xenia.svg';
 import Expander from './images/mitsubishi-xpander.svg';
 import XeniaDetail from './images/xenia-detail.svg';
+import RedHeart from './icons/red_heart.svg';
 
 export {
+  RedHeart,
   SplashCar,
   CheckIcon,
   GasIcon,

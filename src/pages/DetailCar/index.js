@@ -29,7 +29,8 @@ const DetailCar = ({navigation}) => {
       <TouchableOpacity onPress={() => navigation.goBack()}>
         <BackIcon style={{marginLeft: 20, marginTop: 20}} />
       </TouchableOpacity>
-      <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <View
+        style={{justifyContent: 'center', alignItems: 'center', marginTop: 30}}>
         <View>
           <XeniaDetail />
           <Text style={{color: 'black', fontWeight: 'bold', marginTop: 7}}>
@@ -46,37 +47,9 @@ const DetailCar = ({navigation}) => {
           <View
             style={{
               backgroundColor: '#C1BEBE',
-              flexDirection: 'row',
-              alignItems: 'center',
               padding: 17,
               borderRadius: 25,
-              marginTop: 44,
-            }}>
-            <View
-              style={{
-                backgroundColor: 'black',
-                width: 45,
-                height: 45,
-                borderRadius: 25,
-              }}
-            />
-            <View style={{marginLeft: 10}}>
-              <Text style={{color: 'black', fontSize: 14}}>Yafi Reyhan</Text>
-              <Text style={{color: 'black', fontSize: 10}}>Penyewa</Text>
-            </View>
-            <TouchableOpacity>
-              <ChatIcon style={{marginLeft: 30}} />
-            </TouchableOpacity>
-            <TouchableOpacity>
-              <PhoneIcon style={{marginLeft: 15}} />
-            </TouchableOpacity>
-          </View>
-          <View
-            style={{
-              backgroundColor: '#C1BEBE',
-              padding: 17,
-              borderRadius: 25,
-              marginTop: 44,
+              marginTop: 60,
             }}>
             <Text style={{color: 'black'}}>Info Kendaraan</Text>
             <View
@@ -106,7 +79,7 @@ const DetailCar = ({navigation}) => {
           <TouchableOpacity
             style={{
               backgroundColor: 'black',
-              marginTop: 30,
+              marginTop: 50,
               alignItems: 'center',
               padding: 14,
               borderRadius: 25,

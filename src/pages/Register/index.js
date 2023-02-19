@@ -133,28 +133,6 @@ const Register = ({navigation}) => {
         onChangeText={text => setPassword(text)}
         secureTextEntry
       />
-      {/* <TextInput
-        style={{
-          backgroundColor: '#D9D9D9',
-          marginTop: 25,
-          borderColor: '#D9D9D9',
-          borderWidth: 2,
-          paddingLeft: 15,
-          borderRadius: 10,
-          width: 250,
-          height: 40,
-          color: 'black',
-        }}
-        placeholder="Ketik ulang password"
-        placeholderTextColor="black"
-        secureTextEntry
-      /> */}
-      {/* <Button
-        title="Register"
-        onPress={() => {
-          register(name, email, phone, address, password);
-        }}
-      /> */}
       <TouchableOpacity
         style={{
           backgroundColor: 'black',
@@ -164,7 +142,6 @@ const Register = ({navigation}) => {
           width: 174,
           alignItems: 'center',
         }}
-        // onPress={() => handleGoTo('Home')}
         onPress={() => {
           register(name, email, phone, address, password);
         }}>
