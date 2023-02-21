@@ -1,16 +1,7 @@
-// // export const BASE_URL = 'http://10.107.159.139:3000/api/user';
-// //Home
-// export const BASE_URL = 'http://192.168.1.8:3000/api';
 ///////////////////////////////////////////////////////////////////
 // export const BASE_URL = 'http://192.168.200.61:3000/api'; /*IP G8*/
 ///////////////////////////////////////////////////////////////////
-export const BASE_URL = 'http://192.168.1.9:3000/api'; /*IP G8*/
-// // export const BASE_URL = 'http://192.168.1.8:3000/api/user';
-// // export const BASE_URL = '//localhost:3000/api';
-// //////////////////
-// // export const BASE_URL = 'http://127.0.0.1:3000/api/user';
-// // export const BASE_URL = 'http://127.0.0.1:3000/api';
-// // export const BASE_URL = 'http://10.107.190.29:3000/api/user';
+export const BASE_URL = 'http://192.168.1.3:3000/api'; /*IP Rumah*/
 
 // // import firebase from 'firebase/compat/app';
 // // import 'firebase/compat/auth';
