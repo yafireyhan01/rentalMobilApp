@@ -54,12 +54,17 @@ export const AuthProvider = ({children}) => {
       });
   };
 
-  const logout = () => {
+  const logout = res => {
     setIsLoading(true);
+    console.log(res.data);
+    AsyncStorage.removeItem('userInfo');
+    setUserInfo({});
+    setIsLoading(false);
   };
 
   return (
-    <AuthContext.Provider value={{isLoading, userInfo, register, login}}>
+    <AuthContext.Provider
+      value={{isLoading, userInfo, register, login, logout}}>
       {children}
     </AuthContext.Provider>
   );

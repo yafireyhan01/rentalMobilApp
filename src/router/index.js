@@ -24,7 +24,7 @@ const Router = () => {
 
   return (
     // <NavigationContainer>
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator>
       {userInfo.data ? (
         <Stack.Screen
           name="Home"

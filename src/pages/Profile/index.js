@@ -3,9 +3,11 @@ import React, {useContext} from 'react';
 import {BackIcon} from '../../assets';
 import {AuthContext} from '../../context/AuthContext';
 import Spinner from 'react-native-loading-spinner-overlay';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import Login from '../Login';
 
 const Profile = ({navigation}) => {
-  const {userInfo, isLoading} = useContext(AuthContext);
+  const {userInfo, isLoading, logout} = useContext(AuthContext);
 
   const handleGoTo = screen => {
     navigation.navigate(screen);
@@ -46,7 +48,7 @@ const Profile = ({navigation}) => {
             fontWeight: 'bold',
             fontSize: 15,
           }}>
-          Annas Yafi Reyhan
+          {/* {userInfo.data.name} */}
         </Text>
       </View>
       <View style={{flexDirection: 'row'}}>
@@ -68,7 +70,7 @@ const Profile = ({navigation}) => {
             fontWeight: 'bold',
             fontSize: 15,
           }}>
-          yafireyhan01@gmail.com
+          {userInfo.data.email}
         </Text>
       </View>
       <View style={{flexDirection: 'row'}}>
@@ -90,7 +92,7 @@ const Profile = ({navigation}) => {
             fontWeight: 'bold',
             fontSize: 15,
           }}>
-          08123456789
+          {userInfo.data.phone}
         </Text>
       </View>
       <View style={{flexDirection: 'row'}}>
@@ -112,12 +114,20 @@ const Profile = ({navigation}) => {
             fontWeight: 'bold',
             fontSize: 15,
           }}>
-          Depok
+          {userInfo.data.address}
         </Text>
       </View>
       <View
         style={{alignItems: 'center', justifyContent: 'center', marginTop: 40}}>
-        <Button title="Logout" color="black" />
+        <Button
+          title="Logout"
+          color="black"
+          onPress={() => {
+            // AsyncStorage.clear();
+            // AsyncStorage.removeItem('userInfo');
+            // navigation.replace('Login');
+          }}
+        />
       </View>
     </View>
   );
